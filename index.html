@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rylie Edwards</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<style>
+        /* This style will be implemented in the CSS file later */
+    </style>
+</head>
+<body>
+<!-- Main content -->
+<header style="text-align:center; padding: 50px 0;">
+    <h1>Rylie Edwards</h1>
+</header>
+<div class="flex-container">
+    <!-- About Me section -->
+    <section id="about-me" style="padding: 20px;">
+        <h2>About Me</h2>
+        <p>
+            Hello and welcome!<br><br>
+            I'm passionate about data analytics, with a particular fondness for Python, SQL, RStudio, and Tableau. My expertise lies in analyzing trends, optimizing processes, and enhancing efficiency. I enjoy applying my skills to a range of areas, from market analysis to supply chain improvements, always with an eye on future developments.<br><br>
+            Data, for me, isn't just about numbers. It's about uncovering the stories they tell. I excel in simplifying complex concepts and enjoy sharing insights in an engaging way. My background in Business Analytics and Technology, supported by a solid foundation in statistical methods, aids me greatly in this.<br><br>
+            Teamwork is another aspect I value highly. I've held leadership roles in both academic and sports settings and have actively contributed to fundraising and community initiatives. Making a positive impact is important to me.<br><br>
+            Feel free to explore my hobbies and resume below. I'm delighted to have you here and I'm confident that my professional skills, coupled with my enthusiasm and approachable nature, will meet your data science requirements.<br><br>
+            I'm eager to discuss how we can harness the power of data together. Looking forward to our conversation!
+        </p>
+    </section> <!-- Corrected closing tag -->
+    <section id="hobbies" style="background: #121212; color: #ffffff; padding: 20px;">
+        <div class="hobbies-content"> <!-- Add this wrapper for the hobbies content -->
+            <h2>Hobbies</h2>
+            <ul>
+                <li id="reading-link" style="cursor: pointer; color: #AAB7B8; ">Reading</li>
+                <div id="reading-content" style="display:none;">
+                    <div class="image-content" id="reading-image" style="display:none;">
+                        <img src="The_Stand.png" alt="Rylie Reading">
+                    </div>
+                </div>
+                <li id="running-link" style="cursor: pointer; color: #AAB7B8;">Running</li>
+                <div id="running-content" style="display:none;">
+                    <div class="image-content" id="running-image" style="display:none;">
+                        <img src="Edwards, Rylie_track_TU1_1719.jpg" alt="Rylie Running">
+                    </div>
+                </div>
+                <li id="cooking-link" style="cursor: pointer; color: #AAB7B8; ">Cooking</li>
+                <div id="cooking-content" style="display:none;">
+                    <div class="image-content" id="cooking-image" style="display:none;">
+                        <img src="Panna_Cotta.JPG" alt="Rylie Cooking">
+                    </div>
+                </div>
+                <li id="skiing-link" style="cursor: pointer; color: #AAB7B8; ">Skiing</li>
+                <div id="skiing-content" style="display:none;">
+                    <div class="video-content" id="water-skiing-video" style="display:none;">
+                        <video controls>
+                            <source src="Rylie Skiing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <li id="hiking-link" style="cursor: pointer; color: #AAB7B8; ">Hiking</li>
+                <div id="hiking-content" style="display:none;">
+                    <div class="image-content" id="hiking-image" style="display:none;">
+                        <img src="Montana.jpg" alt="Rylie Hiking">
+                    </div>
+                </div>
+                <li id="photography-link" style="cursor: pointer; color: #AAB7B8; ">Photography</li>
+                <div id="photography-content" style="display:none;">
+                    <div class="image-content" id="photography-image" style="display:none;">
+                        <img src="Portugal.jpg" alt="Rylie Photography">
+                    </div>
+                </div>
+                <ul>
+                <!-- Hobbies list -->
+            </ul>
+            <div class="video-content" id="water-skiing-video" style="display:none;">
+                <video controls>
+                    <source src="Rylie Skiing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    <section id="my-picture">
+        <div class="profile-image">
+            <img src="Rylie Edwards Labatt.jpg" alt="Rylie Edwards"/>
+        </div>
+    </section>
+</div>
+
+
+<section id="cv" style="padding: 20px;">
+    <h2>Curriculum Vitae</h2>
+    <iframe src="Rylie Edwards CV (Curriculum Vitae).pdf" width="100%" height="600px">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+</section>
+<script>
+// Function to toggle the content display
+function toggleContent(id) {
+    var content = document.getElementById(id);
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
+// Function to show the video
+function showVideo(id) {
+    var video = document.getElementById(id);
+    video.style.display = "block";
+}
+
+// Function to show the image
+function showImage(id) {
+    var image = document.getElementById(id);
+    image.style.display = "block";
+}
+
+
+    // Add event listeners to the hobbies
+    document.getElementById("reading-link").addEventListener("click", function() { toggleContent("reading-content"); showImage("reading-image"); });
+    document.getElementById("running-link").addEventListener("click", function() { toggleContent("running-content"); showImage("running-image"); });
+    document.getElementById("cooking-link").addEventListener("click", function() { toggleContent("cooking-content"); showImage("cooking-image"); });
+    document.getElementById("skiing-link").addEventListener("click", function() { toggleContent("skiing-content"); showVideo("water-skiing-video"); });
+    document.getElementById("hiking-link").addEventListener("click", function() { toggleContent("hiking-content"); showImage("hiking-image"); });
+    document.getElementById("photography-link").addEventListener("click", function() { toggleContent("photography-content"); showImage("photography-image"); });
+
+</script>
+</body>
+</html>

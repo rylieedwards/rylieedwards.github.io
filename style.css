@@ -1,0 +1,142 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background for the whole page */
+    color: #ffffff; /* Light text */
+}
+
+/* Header styling */
+header {
+    background-color: #0A0F0D;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #AAB7B8;
+    font-size: 3em;
+}
+
+/* Flex container styling */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* About Me section styling */
+#about-me {
+    flex: 1 1 30%; /* grow | shrink | basis */
+    margin-right: 20px;
+    padding: 20px;
+    color: #AAB7B8; /* Light text */
+}
+
+#about-me h2 {
+    color: #85929E; /* Lighter shade for the heading */
+    font-size: 2em;
+}
+
+/* Hobbies section styling */
+#hobbies {
+    flex: 1 1 30%;
+    margin-right: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow the content to wrap */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    justify-content: space-between; /* Space between the list and image */
+    background-color: #1B2631; /* Deep sea blue background */
+    padding: 20px;
+    color: #AAB7B8;
+}
+
+#hobbies h2 {
+    color: #85929E; /* Match the color of the heading with About Me */
+    font-size: 2em; /* Match the font size of the heading with About Me */
+}
+
+/* Profile image styling */
+.profile-image {
+    flex: 1 0 30%; /* grow | shrink | basis */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Cover the area without stretching the image */
+    border-radius: 10px; 
+}
+
+/* Hobbies content styling */
+.hobbies-content {
+    flex: 1; /* Allows the content to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding-right: 20px; 
+}
+
+/* Hobbies list styling */
+#hobbies ul {
+    list-style-type: none; /* No bullets for list */
+    padding: 0;
+    margin: 0; /* No margin for the list */
+}
+
+#hobbies li {
+    background-color: #2C3E50; /* Slightly lighter blue for list items */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* This will remove the underline */
+}
+
+
+.image-content img {
+    max-width: 100%; /* This will make the image scale down if it's too large for its container */
+    max-height: 400px; /* This will limit the maximum height of the image */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    width: auto; /* This will maintain the aspect ratio of the image */
+}
+
+/* Video content styling */
+.video-content {
+    width: 100%; /* Video takes full width */
+    padding: 20px 0; /* Padding above and below the video */
+    border-radius: 20px; 
+}
+
+/* CV section styling */
+#cv {
+    padding: 20px;
+}
+
+#cv h2 {
+    color: #85929E; /* Lighter shade for the heading */
+    font-size: 2em;
+}
+
+#cv object {
+    width: 100%; /* Full width for embedded content */
+    height: 600px; /* Fixed height for embedded content */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .hobbies-content, .profile-image, #about-me {
+        flex-basis: 100%; /* Take full width on smaller screens */
+        margin-bottom: 20px; /* Space between the list/image and the video */
+    }
+}
+
+/* Profile image section styling */
+#my-picture {
+    flex: 1 1 10%; /* Adjust the flex-basis to a value between the original and current size */
+    padding: 20px;
+}
+
+.profile-image img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    max-width: 100%; /* Allow the image to fill the container but not exceed it */
+}
